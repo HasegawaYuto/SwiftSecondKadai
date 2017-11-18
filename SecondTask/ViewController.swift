@@ -9,15 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet weak var inputUserName: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        inputUserName.placeholder = "山田太郎"
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func unwind(_ segue: UIStoryboardSegue) {
+    }
+    
+    override func prepare(for segue:UIStoryboardSegue, sender: Any?){
+        let greetViewController:GreetViewController = segue.destination as! GreetViewController
+        greetViewController.getName = inputUserName.text!
     }
 
 
