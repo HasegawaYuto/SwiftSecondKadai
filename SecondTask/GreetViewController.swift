@@ -13,7 +13,7 @@ class GreetViewController: UIViewController {
     var getName:String = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        greetLabel.text = "ようこそ\(getName)さん"
+        greetLabel.text = "こんにちは、\(getName)さん"
     }
 
     override func didReceiveMemoryWarning() {
